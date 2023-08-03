@@ -1,0 +1,742 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* Adjust the scroll speed by changing the transition duration */
+html, body {
+  scroll-behavior: smooth;
+  transition-duration: 2s; /* Change this value to control the scroll speed (in seconds) */
+}
+body {
+    background: #080808;
+    color: #fff;
+    padding-top: 70px;
+}
+.box {
+    width: 100%; /* Adjust the width and height of the box as needed */
+    height: 100%;
+    overflow: hidden; /* This ensures the image doesn't overflow the box */
+  }
+  .back{ 
+    width: 75%;
+    height: 20%;
+  }
+  
+  .box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: .7cm;
+    width: 100%; /* Set the width of the parent container to 100% */
+    height: 100%; /* Set the height of the parent container to 100% */
+    
+}
+
+.head img {
+    max-width: 50%; /* Set the maximum width of the image to 50% of the parent container */
+    max-height: 50%; /* Set the maximum height of the image to 50% of the parent container */
+    box-shadow:
+    rgba(254, 254, 255, 0.25)
+    0px 50px 100px -20px,
+    rgba(254, 254, 255, 0.25) 0px 30px 60px -30px, rgba(254, 254, 255, 0.25) 0px -2px 6px 0px inset;    position: relative;
+}
+
+.container {
+    padding: 10px 10%;
+    
+}
+
+nav {position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 0;
+    margin-bottom: 10px;
+    border-bottom: 1px solid white;
+    z-index: 1000;
+    margin: 0; /* Add this line to remove any margins */
+}
+
+.logo {
+    width: 140px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.header-text {
+    margin-top: 60%;
+    margin-left: 80%;
+    font-size: 20px;
+}
+
+.header-text h1 {
+    font-size: 30px;
+    margin-top: 20px;
+    background-color: aqua;
+}
+.an {color: #ff004f;}
+.header-text h1 span {
+    color: #ff004f;
+}
+
+/* ----------ABOUT---------- */
+#about {
+    padding: 80px 0px;
+    color: #ababab;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1 {
+    flex-basis: 35%;
+}
+
+.about-col-1 img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow:
+    rgba(254, 254, 255, 0.25)
+    0px 50px 100px -20px,
+    rgba(254, 254, 255, 0.25) 0px 30px 60px -30px, rgba(254, 254, 255, 0.25) 0px -2px 6px 0px inset;    position: relative;
+}
+
+.about-col-2 {
+    flex-basis: 60%;
+}
+
+.sub-title {
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+.at{background-color: #080808;}
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+/* .tab-links:hover::after{
+width: 100%;
+} */
+.tab-links.active-link::after {
+    width: 50%;
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span {
+    color: #b54768;
+    font-size: 14px;
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
+
+
+/* ----------PORTFOLIO---------- */
+#portfolio {
+    padding: 50px 0;
+}
+
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.work {
+    box-shadow:
+    rgba(254, 254, 255, 0.25)
+    0px 50px 100px -20px,
+    rgba(254, 254, 255, 0.25) 0px 30px 60px -30px, rgba(254, 254, 255, 0.25) 0px -2px 6px 0px inset;    position: relative;
+    overflow: hidden;
+}
+
+.work img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+/*-- ----------carousel---------- -->*/
+
+  
+  .carousel-container {
+    text-align: center;
+    color: #ababab;
+    padding-bottom: 80px;
+}
+
+.carousel-container h2 {
+    font-size: 24px;
+    margin-bottom: 2.9cm;
+    padding-top: 1.1cm;
+    color: #2528e7; /* Change this value to the desired color */
+}
+
+.scope {
+    position: relative; /* Change to "relative" to keep it within the carousel container */
+    width: 20%;
+    height: 4cm;
+    margin: 0 auto; /* Center the carousel horizontally */
+    perspective:100%; /* Use "perspective" instead of "perspective(1500px)" */
+    transform-style: preserve-3d;
+    animation: slid 100s linear infinite;
+}
+
+.scope span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: bottom center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(550px); /* Increase the translateZ value */
+    transition: transform 0.5s; /* Add a transition for smooth animation */
+
+}
+
+.scope span img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.scope span:hover img {
+    transform: translateY(-20px) scale(1.5);
+}
+.scope:hover {
+    animation-duration: 160s;}
+
+@keyframes slid {
+    0% {
+        transform: perspective(1500px) rotateY(0deg);
+    }
+    50% {
+        transform: perspective(1500px) rotateY(180deg); /* Halfway through the animation, set the rotation to 180 degrees */
+    }
+    100% {
+        transform: perspective(1500px) rotateY(360deg);
+    }
+}
+
+.layer {
+    width: 100%;
+    height: 0;
+    background: #ff004f;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 16px;
+    transition: height 0.5s;
+}
+
+.layer h2 {
+    margin-bottom: 30px;
+}
+
+.layer a {
+    margin-top: 30px;
+    color: #080808;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.work:hover img {
+    transform: scale(1.1);
+}
+
+.work:hover .layer {
+    height: 100%;
+}
+
+.btn {
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    color: #fff;
+    text-decoration: none;
+    transition: background 0.75s;
+}
+
+.btn:hover {
+    background: #ff004f;
+}
+
+
+/*------button---*/
+
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+:root {
+  --glow-color: hsl(184, 86%, 52%);
+}
+
+
+
+.glowing-btn {
+  position: relative;
+  color: var(--glow-color);
+  cursor: pointer;
+  padding: 0.35em 1.8em .35em 1em ;
+  border: 0.15em solid var(--glow-color);
+  border-radius: 0.45em;
+  background: none;
+  perspective: 2em;
+  font-family: "Raleway", sans-serif;
+  font-size: 2em;
+  font-weight: 400;
+  margin-bottom: 1cm;
+  /* letter-spacing: 1em; */
+
+  -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  animation: border-flicker 2s linear infinite;
+}
+
+.glowing-txt {
+  float: left;
+  margin-right: -0.8em;
+  -webkit-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+    0 0 0.45em var(--glow-color);
+  -moz-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+    0 0 0.45em var(--glow-color);
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--glow-color);
+  animation: text-flicker 3s linear infinite;
+}
+
+.faulty-letter {
+  opacity: 0.5;
+  animation: faulty-flicker 2s linear infinite;
+}
+
+.glowing-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.7;
+  filter: blur(1em);
+  transform: translateY(120%) rotateX(95deg) scale(1, 0.35);
+  background: var(--glow-color);
+  pointer-events: none;
+}
+
+.glowing-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: -1;
+  background-color: var(--glow-color);
+  box-shadow: 0 0 2em 0.2em var(--glow-color);
+  transition: opacity 100ms linear;
+}
+
+.glowing-btn:hover {
+  color: rgba(0, 0, 0, 0.8);
+  text-shadow: none;
+  animation: none;
+}
+
+.glowing-btn:hover .glowing-txt {
+  animation: none;
+}
+
+.glowing-btn:hover .faulty-letter {
+  animation: none;
+  text-shadow: none;
+  opacity: 1;
+}
+
+.glowing-btn:hover:before {
+  filter: blur(1.5em);
+  opacity: 1;
+}
+
+.glowing-btn:hover:after {
+  opacity: 1;
+}
+
+@keyframes faulty-flicker {
+  0% {
+    opacity: 0.1;
+  }
+  2% {
+    opacity: 0.1;
+  }
+  4% {
+    opacity: 0.5;
+  }
+  19% {
+    opacity: 0.5;
+  }
+  21% {
+    opacity: 0.1;
+  }
+  23% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  83% {
+    opacity: 0.4;
+  }
+
+  87% {
+    opacity: 1;
+  }
+}
+
+@keyframes text-flicker {
+  0% {
+    opacity: 0.1;
+  }
+
+  2% {
+    opacity: 1;
+  }
+
+  8% {
+    opacity: 0.1;
+  }
+
+  9% {
+    opacity: 1;
+  }
+
+  12% {
+    opacity: 0.1;
+  }
+  20% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.3;
+  }
+  30% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0.7;
+  }
+  72% {
+    opacity: 0.2;
+  }
+
+  77% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+
+@keyframes border-flicker {
+  0% {
+    opacity: 0.1;
+  }
+  2% {
+    opacity: 1;
+  }
+  4% {
+    opacity: 0.1;
+  }
+
+  8% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .glowing-btn{
+    font-size: 1em;
+  }
+}
+
+/* ----------CONTACT---------- */
+.contact-left {
+    flex-basis: 35%;
+}
+
+.contact-right {
+    flex-basis: 60%;
+}
+
+.contact-left p {
+    margin-top: 30px;
+}
+
+.contact-left p i {
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: color 0.5s, transform 0.5s;
+}
+
+.social-icons a:hover {
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+
+.btn.btn2 {
+    display: inline-block
+}
+
+.btn.btn3 {
+    background: #080808;
+    margin-top: 30px;
+    transition: background 0.5;
+
+}
+
+.btn.btn3:hover {
+    background: #ff004f;
+}
+
+.contact-right form {
+    width: 100%;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+
+
+nav .fas {
+    display: none;
+}
+
+/* ----------CSS FOR SMALL SCREEN---------- */
+@media only screen and (max-width: 600px) {
+    #header {
+        background-image: url(images/background.png);
+    }
+
+    .header-text {
+        margin-top: 100%;
+        font-size: 16px;
+    }
+
+    .header-text h1 {
+        font-size: 30px;
+    }
+
+    nav .fas {
+        display: block;
+        font-size: 25px;
+    }
+
+    nav ul {
+        background: #b54768;
+        position: fixed;
+        top: 0;
+        width: 200;
+        right: 0;
+        height: 100vh;
+        padding-top: 50px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+
+}
+
+/* ----------CSS FOR SMALL SCREEN---------- */
+@media only screen and (max-width: 600px) {
+
+    /* Adjust the header image and text size for small screens */
+    #header {
+        background-image: url(images/background.png);
+    }
+
+    .header-text {
+        margin-top: 100%;
+        font-size: 16px;
+    }
+
+    .header-text h1 {
+        font-size: 30px;
+    }
+
+    /* Show the navigation menu on small screens */
+    nav ul {
+        display: none;
+    }
+
+    nav .fas {
+        display: block;
+        font-size: 25px;
+    }
+
+    nav ul {
+        background: #b54768;
+        position: fixed;
+        top: 0;
+        width: 200px;
+        /* Increased the width to accommodate the menu items */
+        right: 0;
+        height: 100vh;
+        padding-top: 50px;
+        transform: translateX(200px);
+        /* Off-canvas menu, initially hidden */
+        transition: transform 0.3s ease-in-out;
+    }
+
+    nav ul.show {
+        transform: translateX(0);
+        /* Show the menu when 'show' class is applied */
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+}
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  

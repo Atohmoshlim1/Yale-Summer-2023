@@ -204,6 +204,115 @@ width: 100%;
 .tab-contents.active-tab {
     display: block;
 }
+/* ------SASS Team------ */
+.my-container {
+  font-family: 'Raleway', sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 300;}
+
+.box {
+  
+    position: relative;
+    display: inline-block; /* added this to ensure the text remains under the box */
+  }
+
+
+.box-caption {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: -5px; /* adjusted this to position the text under the box */
+  color: #fff;
+  transform: translateY(100%); /* to shift it down under the box */
+}
+
+.all {
+  display: flex;
+  perspective: 10px;
+  transform: perspective(300px) rotateX(20deg);
+  will-change: perspective;
+  perspective-origin: center center;
+  transition: all 1.3s ease-out;
+  justify-content: center;
+  transform-style: preserve-3d;
+}
+
+.all:hover {
+  perspective: 1000px;
+  transition: all 1.3s ease-in;
+  transform: perspective(10000px) rotateX(0deg);
+}
+
+.default-text {
+  position: relative;  /* Changed from absolute to relative */
+  width: 90%;
+    color: #fff;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .3s ease;
+    will-change: transform;
+    text-shadow: 0 0 5px rgba(100, 100, 255, .6);
+    opacity: 1;
+}
+
+.left, .center, .right {
+  width: 300px;
+  height: 250px;
+  transform-style: preserve-3d;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  box-shadow: 0 0 20px 5px rgba(100, 100, 255, .4);
+  opacity: 0;
+  transition: all .3s ease;
+  transition-delay: 1s;
+  position: relative;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #ff004f;
+  cursor: pointer;
+  background-blend-mode: color-burn;
+  margin: 0 10px;
+}
+
+.all:hover .left {
+  opacity: 1;
+  transform: translateX(-250px);
+}
+
+.all:hover .right {
+  opacity: 1;
+  transform: translateX(250px);
+}
+
+.center {
+  opacity: 1;
+  z-index: 1;  /* Ensure the center box is on top */
+}
+
+.text {
+  transform: translateY(30px);
+  opacity: 0;
+  transition: all .3s ease;
+  bottom: -30px; /* Adjust this to move the text up or down */
+  left: 0; /* Adjust this to move the text left or right */
+  right: 0; /* Add this to allow for text alignment */
+  text-align: center; /* This will center the text */
+  position: absolute;
+  will-change: transform;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(100, 100, 255, .6);
+}
+
+.all:hover .text {
+  opacity: 1;
+}
 
 
 /* ----------PORTFOLIO---------- */

@@ -315,21 +315,21 @@ width: 100%;
   flex-direction: column;
   padding: 0 40px;
   text-align: center;
-  font-size: 13px;
+  font-size: 16px;
   transition: height 0.75s;
 }
 @media only screen and (max-width: 1366px) {
   .layer {
       padding: 0 10px;
-      font-size: 12px;
+      font-size: 14px;
   }
   .layer h2 {
       margin-bottom: 15px;
-      font-size: 12px;
+      font-size: 14px;
   }
   .layer a {
       margin-top: 15px;
-      font-size: 12px;
+      font-size: 14px;
       line-height: 50px;
       width: 50px;
       height: 50px;
@@ -338,15 +338,15 @@ width: 100%;
 @media only screen and (max-width: 600px) {
   .layer {
       padding: 0 10px;
-      font-size: 14px;
+      font-size: 12px;
   }
   .layer h2 {
       margin-bottom: 15px;
-      font-size: 14px;
+      font-size: 12px;
   }
   .layer a {
       margin-top: 15px;
-      font-size: 14px;
+      font-size: 12px;
       line-height: 50px;
       width: 50px;
       height: 50px;

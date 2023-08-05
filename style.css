@@ -278,17 +278,17 @@ width: 100%;
   background-color: #ff004f;
   cursor: pointer;
   background-blend-mode: color-burn;
-  margin: 0 10px;
+  margin: 0 100px;
 }
 
 .all:hover .left {
   opacity: 1;
-  transform: translateX(-250px);
+  transform: translateX(-150px);
 }
 
 .all:hover .right {
   opacity: 1;
-  transform: translateX(250px);
+  transform: translateX(150px);
 }
 
 .center {

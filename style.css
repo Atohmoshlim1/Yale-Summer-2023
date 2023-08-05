@@ -244,7 +244,7 @@ width: 100%;
 .all:hover {
   perspective: 1000px;
   transition: all 1.3s ease-in;
-  transform: perspective(10000px) rotateX(0deg);
+  transform: perspective(1000px) rotateX(0deg);
 }
 
 .default-text {
@@ -262,7 +262,7 @@ width: 100%;
 }
 
 .left, .center, .right {
-  width: 300px;
+  width: 400px;
   height: 250px;
   transform-style: preserve-3d;
   border-radius: 10px;
@@ -283,12 +283,12 @@ width: 100%;
 
 .all:hover .left {
   opacity: 1;
-  transform: translateX(-150px);
+  transform: translateX(-20px);
 }
 
 .all:hover .right {
   opacity: 1;
-  transform: translateX(150px);
+  transform: translateX(20px);
 }
 
 .center {
